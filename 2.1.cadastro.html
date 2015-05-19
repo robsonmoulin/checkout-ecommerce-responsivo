@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+
+        <meta charset="utf-8">
+        
+        <title>Identificação</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=OpenSans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href="App_Themes/site/checkout.css" rel="stylesheet" type="text/css"/>
+        <link href="App_Themes/site/font.css" rel="stylesheet" type="text/css"/>
+        
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.checkout.js"></script>
+   </head>
+   
+   
+<body>   
+	<section>
+        <div class="wrapper">
+        
+        
+            <div class="checkout">
+
+                	<div class="checkout-logotipo">
+                    	
+                    </div><!--/checkout-logotipo-->
+                    <div class="navegador">
+                    	<div class="check-carrinho"><div class="info-inativo">Carrinho</div></div>
+                           	<hr class="linha-ativa">
+                        <div class="check-ativo">2 <div class="info-ativo">Identificação</div></div>
+                        	<hr class="linha-inativa">
+                        <div class="check-inativo">3 <div class="info-inativo">Pagamento</div></div>
+                        	<hr class="linha-inativa">
+                        <div class="check-inativo">4 <div class="info-inativo">Confirmação</div></div>
+                    </div><!--/navegador-->
+       
+            	<div class="titulo">
+                    <span class="fa fa-pencil-square-o"></span>
+                    <h1>Meu Cadastro</h1>
+                </div><!--/titulo-->
+                
+                <p class="info">Os campos com ( * ) são de preenchimento obrigatório e essenciais para processarmos o envio do seu futuro pedido.</p>
+
+                <div class="meu-cadastro">
+         
+                  <div class="selecao">
+                    
+						 <input name="radio" type="radio" value="Pessoa Física" onclick="fisica()" checked /> Pessoa Física
+                         <input name="radio" type="radio" value="Pessoa Jurídica" onclick="juridica()" /> Pessoa Jurídica
+                  
+                  </div><!--/selecao-->
+            
+                     
+                    <div id="fisica" class="pessoa-fisica">
+                        <div class="seletor">Pessoa Fisica</div>
+                        <div class="formulario">
+                        	<label>* Como gostaria de ser chamado?</label>
+                            <input name="" type="text" class="g">
+                            
+                            <label>* Nome Completo</label>
+                            <input name="" type="text" class="g">
+                            
+                            <label>* CPF</label>
+                            <input name="" type="text" class="m" id="cpf">
+                            
+                            <label>* Data de Nascimento</label>
+                            <input name="" type="text" class="p" id="data">
+                            
+                            <label>* Sexo</label>
+                            <select name="" class="m">
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                            </select>
+                            
+                            
+                            <label>* Telefone</label>
+                            <input name="" type="text" class="p">
+                            
+                            <label>Telefone</label>
+                            <input name="" type="text" class="p">
+                            
+                            <label>Celular</label>
+                            <input name="" type="text" class="p">
+                            
+                            <label>* E-mail</label>
+                            <input name="" type="text" class="g">
+                            
+                            <label>* Senha</label>
+                            <input name="" type="password" class="p">
+                            
+                            <label>* Confirme a Senha</label>
+                            <input name="" type="password" class="p">
+                            
+                                             
+                            <div class="checkbox"><input name="" type="checkbox" value=""> Receber ofertas por e-mail da nossa loja.</div>
+                            
+                            
+                            
+                        </div><!--/formulario-->
+                    </div><!--/pessoa-fisica-->
+                    
+                    <div id="juridica" class="pessoa-juridica">
+                         <div class="seletor">Pessoa Jurídica</div>
+                            <div class="formulario">
+                                <label>* Razão Social da Empresa</label>
+                                <input name="" type="text" class="g">
+                                
+                                <label>* Nome de Contato</label>
+                                <input name="" type="text" class="g">
+                                
+                                <label>* CNPJ</label>
+                                <input name="" type="text" class="m">
+                                
+                                <label>Inscrição Estadual</label>
+                                <input name="" type="text" class="m" id="data">
+                             
+                                <label>* Telefone</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>Telefone</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>Celular</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>* E-mail</label>
+                                <input name="" type="text" class="g">
+                                
+                                <label>* Senha</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>* Confirme a Senha</label>
+                                <input name="" type="text" class="p">
+                                
+                                                 
+                                <div class="checkbox">
+                                    <input name="" type="checkbox" value=""> Receber ofertas por e-mail da nossa loja.
+                                </div>
+
+                        	</div><!--/formulario-->
+                     
+                   </div><!--/pessoa-juridica--> 
+                
+                </div><!--/meu-cadastro-->
+                
+                
+                
+                <div class="titulo">
+                    <span class="fa fa-map-marker"></span>
+                    <h2>Endereço</h2>
+                </div><!--/titulo-->
+                
+                <p class="info">Os campos com ( * ) são de preenchimento obrigatório e essenciais para processarmos o envio do seu futuro pedido.</p>
+                
+                <div class="endereco">
+                	 <div class="formulario">
+                                <label>* CEP</label>
+                                <input name="" type="text" class="p" id="cep">
+                                
+                                <label>* Tipo do Endereço</label>
+                                <select name="" class="m">
+                                  <option>Apartamento</option>
+                                  <option>Casa</option>
+                                  <option>Comercial</option>
+                                  <option>Outro</option>
+                                </select>
+                                
+                                
+                                <label>* Nome do Enderço</label>
+                                <input name="" type="text" class="g" placeholder="Ex.: Meu Trabalho, Casa dos Pais">
+
+                                <label>* Endereço</label>
+                                <input name="" type="text" class="g">
+                                
+                                <label>* Número</label>
+                                <input name="" type="text" class="pp" >
+                             
+                                <label>Complemento</label>
+                                <input name="" type="text" class="m">
+                                
+                                <label>* Bairro</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>* Cidade</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>* Estado</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>* País</label>
+                                <input name="" type="text" class="p">
+                                
+                                <label>Ponto de Referência</label>
+                                <textarea name="" cols="10" rows="5" class="g"></textarea>
+
+                        	</div><!--/formulario-->
+                
+                </div><!--/endereco-->
+                
+                <div class="bt-voltar"><a href="javascript:history.go(-1)"> < voltar  </a></div>
+				<div class="bt-concluir-compra"><a href="#">Continuar > </a></div>
+
+		</div><!--/checkout-->
+            
+            
+         </div><!--/wrapper-->
+    </section>
+</body>
+</html>
+

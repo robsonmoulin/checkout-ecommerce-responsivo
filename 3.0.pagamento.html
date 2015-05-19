@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+
+        <meta charset="utf-8">
+        
+        <title>Pagamento</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=OpenSans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href="App_Themes/site/checkout.css" rel="stylesheet" type="text/css"/>
+        <link href="App_Themes/site/font.css" rel="stylesheet" type="text/css"/>
+        
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.checkout.js"></script>
+
+   </head>
+   
+   
+<body>   
+	<section>
+        <div class="wrapper">
+        
+        
+            <div class="checkout">
+
+                	<div class="checkout-logotipo">
+                    	
+                  </div><!--/checkout-logotipo-->
+
+                    <div class="navegador">
+                    	<div class="check-carrinho"><div class="info-inativo">Carrinho</div></div>
+                           	<hr class="linha-ativa">
+                        <div class="check-ativo">2 <div class="info-inativo">Identificação</div></div>
+                        	<hr class="linha-ativa">
+                        <div class="check-ativo">3 <div class="info-ativo">Pagamento</div></div>
+                        	<hr class="linha-inativa">
+                        <div class="check-inativo">4 <div class="info-inativo">Confirmação</div></div>
+                    </div><!--/navegador-->
+       
+            	<div class="titulo">
+                    <span class="fa fa-credit-card"></span>
+                    <h1>Pagamento</h1>
+                </div><!--/titulo-->
+                
+
+                <div class="seu-pedido">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td colspan="2" class="header" >Seu Pedido</td>
+                      </tr>
+                      <tr>
+                        <td class="dados">Total em Produtos (1 item)</td>
+                        <td class="dados">R$ 200,00</td>
+                      </tr>
+                      <tr>
+                        <td class="dados">Frete</td>
+                        <td class="dados">R$ 5,00</td>
+                      </tr>
+                      <tr>
+                        <td class="total">Total</td>
+                        <td class="total">R$ 205,00</td>
+                      </tr>
+                    </table>
+                </div><!--/seu-pedido-->
+                
+                 <div class="endereco-entrega">
+                 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td colspan="2" class="header" >Endereço de Entrega <a href="#">Selecionar outro endereço</a></td>
+
+                      </tr>
+                      <tr>
+                        <td class="dados"><strong>Meu Endereço</strong></td>
+
+                      </tr>
+                      <tr>
+                        <td class="dados">
+                          <table>
+                            <tr>
+                              <td align="right"><b>Nome do Endereço:</b></td>
+                              <td>Minha Casa</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                              <td align="right"><b>Destinatario:</b></td>
+                              <td>João Souza Oliveida</td>
+                            </tr>
+                            <tr>
+                              <td align="right"><b>Endedeço:</b></td>
+                              <td>Al São Caetano, 2790</td>
+                            </tr>
+                            <tr>
+                              <td align="right"><b>Bairro:</b></td>
+                              <td>Santa Madia</td>
+                            </tr>
+                            <tr>
+                              <td align="right"><b>CEP:</b></td>
+                              <td>09560-500</td>
+                            </tr>
+                            <tr>
+                              <td align="right"><b>Cidade:</b></td>
+                              <td>São Caetano do Sul  - SP - Brasil</td>
+                            </tr>
+                            <tr>
+                              <td align="right"><b>Referência:</b></td>
+                              <td>Faculdade Unisquina</td>
+                            </tr>
+                            <tr>
+                              <td align="right"><b>Tipo:</b></td>
+                              <td>Residencial</td>
+                            </tr>
+                         </table>
+                        </td>
+						          </tr>
+                      <tr>
+                        <td class="alerta">
+                        	
+                            <div class="icon-alerta fa fa-exclamation-triangle"></div>
+                            
+                            <div class="descritivo">
+                                Faz tempo que não compra com a gente?<br>
+                                Revise seu endereço para evitar<br>
+                                problemas na entrega.
+                            </div><!--/descritivo-->
+                        
+                        	<div class="bt-revisar"><a class="inline" href="#inline_content">Revisar</a></div>
+                            
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    	<div style="display:none">
+                            	<div id="inline_content" class="checkout">
+                                
+                                   <div class="formulario">
+
+                                      <label>* CEP</label>
+                                      <input name="" type="text" class="p" id="cep">
+                                      
+                                      <label>* Tipo do Endereço</label>
+                                      <select name="" class="m">
+                                        <option>Apartamento</option>
+                                        <option>Casa</option>
+                                        <option>Comercial</option>
+                                        <option>Outro</option>
+                                      </select>
+                                      
+                                      
+                                      <label>* Nome do Enderço</label>
+                                      <input name="" type="text" class="g" placeholder="Ex.: Meu Trabalho, Casa dos Pais">
+
+                                      <label>* Endereço</label>
+                                      <input name="" type="text" class="g">
+                                      
+                                      <label>* Número</label>
+                                      <input name="" type="text" class="pp" >
+                                   
+                                      <label>Complemento</label>
+                                      <input name="" type="text" class="m">
+                                      
+                                      <label>* Bairro</label>
+                                      <input name="" type="text" class="p">
+                                      
+                                      <label>* Cidade</label>
+                                      <input name="" type="text" class="p">
+                                      
+                                      <label>* Estado</label>
+                                      <input name="" type="text" class="p">
+                                      
+                                      <label>* País</label>
+                                      <input name="" type="text" class="p">
+                                      
+                                      <label>Ponto de Referência</label>
+                                      <textarea name="" cols="10" rows="5" class="g"></textarea>
+
+                                      <input type="submit" value="Salvar Alterações">
+
+                                </div><!--/formulario-->
+                                    
+                            	</div><!--/inline_content-->
+                           </div><!--/none-->
+                    
+                </div><!--/endereco-entrega-->
+                
+                
+                
+                <div class="titulo">
+                    <p>Escolha a Forma de Pagamento</p>
+                </div><!--/titulo-->
+                
+              <div class="forma-de-pagamento">
+                	<div class="tipo">
+                    	<img src="imagens/layout/checkout/pagseguro.jpg" width="304" height="103" alt="Pagseguro"> 
+                    	<p><span>Pagseguro UOL</span><br>
+						Pagamentos com Cartões de Credito, Débito e Boleto Bancário</p>
+                        
+                        <div class="bt-selecionar"><a href="#">Selecionar</a></div>
+                        
+ 					</div><!--/tipo-->   
+          
+              </div><!--/forma-de-pagamento-->
+                
+              
+                
+				
+
+		</div><!--/checkout-->
+            
+            
+         </div><!--/wrapper-->
+    </section>
+</body>
+</html>
+

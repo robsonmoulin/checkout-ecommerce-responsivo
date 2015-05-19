@@ -1,0 +1,384 @@
+/*==============================================================================================================
+ RESET PRINCIPAL
+================================================================================================================*/
+
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video, select {margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; outline:none;}
+
+body{font-family: 'OpenSans', sans-serif; font-size: 14px;}
+
+:focus {outline: 0;}
+table {border-collapse: separate; border-spacing: 0;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+header, section, nav, article, aside, footer{display:block;}
+
+.wrapper{width:990px; margin:auto;}
+img {border: solid 0px; outline:none; text-decoration:none; max-width:100%;}
+p{padding:0 0 10px 0;}
+hr{width:auto; height:1px; border:solid 0px; background:#ccc;}
+
+a{text-decoration:none; -webkit-transition:background 0.5s ease-out; -moz-transition:background 0.5s ease-out; -o-transition:background 0.5s ease-out; -ms-transition:background 0.5s ease-out; transition:background 0.5s ease-out;}
+
+
+/*==============================================================================================================
+ CHECKOUT GLOBAL
+================================================================================================================*/
+
+.checkout{float:left; width:100%; margin:0 0 10% 0;}
+.checkout .titulo{float:left; width:100%; height:100px; font-size:21px; color:#333; font-weight:bold; }
+.checkout .titulo span{width:48px; height:48px; float:left; border:solid 2px #333333; border-radius:100%; text-align: center; line-height: 48px; font-size: 21px;}
+.checkout .titulo h1{ margin:12px 0 0 12px; float:left;}
+.checkout .titulo h2{ margin:12px 0 0 12px; float:left;}
+.checkout p.info{margin:0 0 20px 0; }
+
+
+/* BOTÕES */
+
+
+.checkout .bt-continuar-comprando a{ padding:12px 25px 12px 25px; float:left; background:#e6e6e6; float:left; border-radius:10px; color:#333; font-weight:bold; font-size:14px; text-decoration:none;}
+.checkout .bt-continuar-comprando a:hover{background:#ccc; color:#333;}
+
+.checkout .bt-concluir-compra a{ padding:12px 45px 12px 45px; float:right; background:#ed1c24; border-radius:10px; color:#fff; font-weight:bold; font-size:14px; text-decoration:none;}
+.checkout .bt-concluir-compra a:hover{background:#be0007; color:#fff;}
+
+.checkout .bt-selecionar a{ padding:12px 45px 12px 45px; float:right; background:#ed1c24; border-radius:10px; color:#fff; font-weight:bold; font-size:14px; text-decoration:none;}
+.checkout .bt-selecionar a:hover{background:#be0007; color:#fff; }
+
+.checkout .bt-revisar a{padding:12px 25px 12px 25px; float:left; background:#333; float:left; border-radius:10px; color:#fff; font-weight:bold; font-size:14px; text-decoration:none;}
+.checkout .bt-revisar a:hover{background:#999;}
+
+.checkout .bt-ok a{ text-decoration:none; color:#333; background:#e5e5e5; padding:5px 10px 5px 10px; border-radius:5px;  margin:2px 0 0 5px;}
+.checkout .bt-ok a:hover{background:#ccc;}
+
+.checkout .bt-confirmar a{ padding:12px 45px 12px 45px; margin:20px 120px 0 0 ; float:right; background:#ed1c24; border-radius:10px; color:#fff; font-weight:bold; font-size:14px; text-decoration:none;}
+.checkout .bt-confirmar a:hover{background:#be0007; color:#fff;}
+
+.checkout .bt-voltar a{ padding:12px 25px 12px 25px; float:left; background:#e6e6e6; float:left; border-radius:10px; color:#333; font-weight:bold; font-size:14px; text-decoration:none;}
+.checkout .bt-voltar a:hover{background:#ccc; color:#333;}
+
+
+/* NAVEGACAO PASSO A PASSO */
+
+
+.checkout .checkout-logotipo{ width:20%; height:100px; float:left; background:#fafafa; margin:0 0 30px 0;}
+.checkout .navegador{ width:75%; height:100px; float:left; margin:30px 0 30px 5%;}
+
+.checkout .navegador .check-carrinho{width:30px; height:30px; position:relative; float:left; border:solid 2px #ed1c24; border-radius:100%; background: url(../../imagens/layout/checkout/icon-passo-a-passo.png) no-repeat 50% 50% #ed1c24; }
+
+.checkout .navegador .check-ativo{width:30px; height:30px; position:relative; float:left; border:solid 2px #ed1c24; border-radius:100%; background:#ed1c24; color:#fff; text-align:center; font-weight:bold; font-size:14px; line-height: 26px;}
+
+.checkout .navegador .check-inativo{width:30px; height:30px;  position:relative; float:left; border:solid 2px #333; border-radius:100%; background:#fff; color:#333; text-align:center; font-weight:bold; font-size:14px; line-height: 26px;}
+
+.checkout .navegador hr.linha-ativa{width:20%; height:2px; border:solid 0px; background:#ed1c24; float:left; margin:16px 0 0 0;}
+.checkout .navegador hr.linha-inativa{width:20%; height:2px; border:solid 0px; background:#333333; float:left; margin:16px 0 0 0;}
+
+.checkout .navegador .info-inativo{position:absolute; top:-30%; left:140%; font-size:14px; color:#333; font-weight:bold;}
+.checkout .navegador .info-ativo{position:absolute; top:-30%; left:140%; font-size:14px; color:#ed1c24; font-weight:bold;}
+
+
+
+/*==============================================================================================================
+ CARRINHO
+================================================================================================================*/
+
+.checkout .carrinho{ width:100%; height:auto; float:left; border:solid 1px #cccccc; border-radius:10px; padding:30px 0 30px 0; margin:0 0 40px 0}
+.checkout .carrinho table{ border:0px solid; }
+.checkout .carrinho .header{font-size:14px; color:#333; font-weight:bold; text-align:center; border:0px solid; padding:0 0 25px 0;}
+.checkout .carrinho .dados{border-top:1px solid #ccc; border-right:1px solid #ccc; vertical-align:middle;}
+.checkout .carrinho .quantidade{ width:65%; margin:0 0 0 35%; }
+.checkout .carrinho .quantidade .pp{ width:40px; border:solid 1px #cccccc; padding:5px; float:left; }
+.checkout .carrinho .quantidade .controle-de-unidades{ width:10px; margin:0 0 0 10px; float:left;}
+.checkout .carrinho .quantidade .controle-de-unidades a{color: #333; font-size: 10px;}
+.checkout .carrinho .bt-excluir a{background:#f9f9f9; border-radius:12px; padding:5px 10px 5px 10px; float:left; margin:10% 0 0 10%;  color:#333; text-decoration:none;}
+.checkout .carrinho .bt-excluir a:hover{background:#e5e5e5;}
+
+.checkout .carrinho .carrinho-imagem-produto{float:left; width:15%; padding:20px;}
+.checkout .carrinho .carrinho-descricao-produto{ float:left; width:70%; padding:25px 0 0 0; }
+
+
+.checkout .carrinho .subtotal{ padding:10px 20px 10px 0; border-top:1px solid #ccc; border-right:1px solid #ccc; vertical-align:middle; font-weight:bold; font-size:14px;}
+.checkout .carrinho .frete{ padding:10px 20px 10px 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc; border-right:1px solid #ccc; vertical-align:middle; font-weight:bold; font-size:14px;}
+.checkout .carrinho .frete span{ font-size: 21px; margin:0 0 0 40px;}
+.checkout .carrinho .frete .p{ width:100px; border:solid 1px #cccccc; padding:5px;  }
+.checkout .carrinho .total{ padding:20px 20px 20px 0; border:0px solid #ccc; vertical-align:middle; font-weight:bold; font-size:18px; background:#ed1c24; color:#fff; text-align:right;}
+
+
+/* SUGESTÕES DE PRODUTOS */
+
+.checkout .sugestao{ width:100%; float:left; margin:50px 0 50px 0;}
+.checkout .sugestao p{font-size:18px; color:#333; font-weight:bold;}
+
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-container {background: #fff; margin:10px 0 0 0;}
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-direction-rtl {direction: rtl;}
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-container-horizontal {width: 100%; }
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-clip { overflow: hidden;}
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-clip-horizontal {width:86%; height:80px; margin:0 0 0 7%;}
+
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-item {width:80px; height:80px; margin:0 7px 0 8px}
+
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-next-horizontal {position: absolute; top: 13%; right: 1%; width:48px; height:48px; border:solid 2px #333333; border-radius:100%; cursor: pointer; background:url(../../imagens/layout/checkout/icon-arrow-right.png) no-repeat center center;}
+
+.checkout .sugestao .jcarousel-skin-tango .jcarousel-prev-horizontal {position: absolute; top: 13%; left: 1%; width:48px; height:48px; border:solid 2px #333333; border-radius:100%; cursor: pointer; background:url(../../imagens/layout/checkout/icon-arrow-left.png) no-repeat center center;}
+
+
+
+
+/*==============================================================================================================
+ IDENTIFICACAO
+================================================================================================================*/
+
+.checkout .entrar{ float:left; width:38%; margin:0 5% 0 0; border-right:1px solid #ccc; padding:0 8% 0 0}
+.checkout .entrar span{ float:left; font-size:18px; font-weight:bold; color:#333; margin:0 0 20px 0;}
+.checkout .entrar .m{ width:95%; padding:8px; border:solid 1px #999; margin:8px 0 0 0; color:#333; font-size:14px;}
+.checkout .entrar p{ text-align:right; padding:10px 0 40px 0; color:#333;}
+.checkout .entrar p a{color:#333;}
+
+.checkout .entrar .alterar-pedido a{ color:#666; text-decoration:none; font-size:14px; margin:80px 0 0 0; float:left; }
+.checkout .entrar .alterar-pedido a:hover{ color:#ed1c24;}
+
+.checkout .cadastrar{ float:left; width:38%; margin:0 0 0 3%;}
+.checkout .cadastrar span{ font-size:18px; font-weight:bold; color:#333;}
+.checkout .cadastrar .m{ width:95%; padding:8px; border:solid 1px #999; margin:8px 0 0 0; color:#333; font-size:14px; margin:0 0 90px 0;}
+.checkout .cadastrar label{ padding:20px 0 8px 0; color:#333; font-weight:bold; font-size:14px; width: 100%; float: left;}
+
+
+/* MEU CADASTRO */
+
+.checkout .meu-cadastro .pessoa-juridica{ display:none;}
+.checkout .meu-cadastro{ width:100%; height:auto; float:left; border:solid 1px #ccc; border-radius:10px; padding:5% 0 5% 0; margin:0 0 5% 0; }
+.checkout .meu-cadastro .selecao{ width:60%; margin:0 0 5% 40%;}
+.checkout .meu-cadastro .seletor{ width:18%; height:36px; float:left; background:url(../../imagens/layout/checkout/seletor.png) no-repeat 0 0; margin:8px 0 0 0; font-weight:bold; font-size:14px; padding:8px; text-align:center}
+
+.checkout .formulario{ float:left; width:80%; height:auto;}
+.checkout .formulario label{ width:30%; float:left; text-align:right; padding:15px 15px 0 0;}
+.checkout .formulario input{ width:60%; padding:8px; margin:0px 0 10px 0; border:1px solid #999; font-weight:400; font-size:16px; color:#333; display:block;}
+.checkout .formulario input:focus{border:1px solid #666;}
+.checkout .formulario input.g{ width:50%;}
+.checkout .formulario input.m{ width:30%;}
+.checkout .formulario input.p{ width:15%;}
+.checkout .formulario input.pp{ width:5%;}
+
+.checkout .formulario select{ width:60%; padding:8px; margin:0px 0 10px 0; border:1px solid #999; font-weight:400; font-size:16px; color:#333; display:block;}
+.checkout .formulario select:focus{border:1px solid #666;}
+.checkout .formulario select.g{ width:50%;}
+.checkout .formulario select.m{ width:30%;}
+.checkout .formulario select.p{ width:15%;}
+.checkout .formulario select.pp{ width:5%;}
+
+.checkout .formulario textarea{ width:60%; padding:8px; margin:0px 0 10px 0; border:1px solid #999; font-weight:400; font-size:16px; color:#333; display:block;}
+.checkout .formulario textarea:focus{border:1px solid #666;}
+.checkout .formulario textarea.g{ width:50%;}
+.checkout .formulario textarea.m{ width:30%;}
+.checkout .formulario textarea.p{ width:15%;}
+.checkout .formulario textarea.pp{ width:5%;}
+
+.checkout .formulario .checkbox{margin:50px 0 0 0;}
+.checkout .formulario input[type="checkbox"] { float:left; width: 50px; margin:0 0 0 15%;}
+.checkout .formulario input[type="submit"]{width:auto; padding: 15px 20px 15px 20px;  background: #ed1c24; border-radius:10px; border:solid 0px; color: #fff; margin: 15px 15% 0 0;  cursor: pointer; float: right;}
+
+
+
+/* MEU ENDERECO */
+
+.checkout .endereco{width:82%; height:auto; float:left; border:solid 1px #ccc; border-radius:10px; padding:5% 0 5% 18%; margin:0 0 5% 0; }
+
+.checkout .meus-enderecos{width:40%; float: left; border: solid 1px #999; padding: 3%; margin:0 20px 0 0;}
+.checkout .meus-enderecos td{padding: 3px;}
+.checkout .meus-enderecos input[type="submit"]{width:auto; padding: 10px 20px 10px 20px; background: #fff; border-radius:10px;  color: #333; margin: 15px 0 0 10px;  cursor: pointer; float: right; border: solid 1px #666;}
+.checkout .meus-enderecos input[type="submit"]:hover{background:#ed1c24; border:solid 1px #ed1c24; color: #fff;}
+
+.checkout .novo-endereco{ width: 100%; float: left; margin:40px 0 0 0;}
+.checkout .novo-endereco h2{color:#ed1c24; margin:20px 0 60px 0; font-size: 18px}
+.checkout p.novo-endereco{color:#ed1c24; margin:20px 0 20px 0; font-size: 18px; font-weight: 700;}
+
+/*==============================================================================================================
+ PAGAMENTO
+================================================================================================================*/
+
+.checkout .forma-de-pagamento{width:90%; height:auto; float:left; border:solid 1px #ccc; border-radius:10px; padding:5% 5% 5% 5%;}
+.checkout .forma-de-pagamento .tipo{ width:100%; height:auto; margin:auto; text-align:center;}
+.checkout .forma-de-pagamento .tipo p{ margin:2% 0 2% 0;}
+.checkout .forma-de-pagamento .tipo p span{ font-size:14px; font-weight:bold;}
+
+.checkout .seu-pedido{width:40%; height:auto; float:left; border:solid 1px #cccccc; border-radius:10px; padding:20px 0 20px 0; margin:0 0 40px 0}
+.checkout .seu-pedido table{ border:0px solid;}
+.checkout .seu-pedido .header{font-size:14px; color:#333; font-weight:bold; border-bottom:1px solid #ccc; padding:0 0 25px 30px;}
+.checkout .seu-pedido .dados{border-right:1px solid #ccc; vertical-align:middle; padding:15px 0 15px 30px;}
+.checkout .seu-pedido .total{border:0px solid #ccc; vertical-align:middle; padding:15px 0 15px 30px; background:#ed1c24; color:#fff; font-size:18px;}
+
+.checkout .endereco-entrega {width:50%; height:auto; float:left; border:solid 1px #cccccc; border-radius:10px; padding:20px 0 20px 0; margin:0 0 40px 5%;}
+.checkout .endereco-entrega table{ border:0px solid;}
+.checkout .endereco-entrega .header{font-size:14px; color:#333; font-weight:bold; border-bottom:1px solid #ccc; padding:0 0 25px 30px;}
+.checkout .endereco-entrega .header a{float: right; color: #ed1c24; margin:0 30px 0 0;}
+.checkout .endereco-entrega .header a:hover{color: #333;}
+.checkout .endereco-entrega .dados{border-right:1px solid #ccc; vertical-align:middle; padding:15px 0 15px 30px;}
+.checkout .endereco-entrega .dados td{padding: 5px;}
+.checkout .endereco-entrega .alerta{border:0px solid #ccc; vertical-align:middle; padding:15px 0 15px 30px; background:#e6e6e6; color:#333; font-size:12px;}
+.checkout .endereco-entrega .alerta .icon-alerta{ width:42px; height:42px; float:left; border-radius:100%; background:#ed1c24; color: #fff; text-align: center; line-height:40px; font-size: 21px}
+.checkout .endereco-entrega .alerta .descritivo{ float:left;  margin:0 20px 0 20px;}
+
+
+
+/*==============================================================================================================
+ CONFIRMACAO
+================================================================================================================*/
+
+.checkout .numero-pedido{width:100%; height:auto; float:left; border:solid 1px #ccc; border-radius:10px; padding:5% 0 5% 0; margin:0 0 5% 0;}
+.checkout .numero-pedido p{ font-size:18px; font-weight:bold; text-align:center;}
+.checkout .numero-pedido p span{font-size:36px;}
+
+.checkout .endereco-confirmacao {width:100%; height:auto; float:left; border:solid 1px #cccccc; border-radius:10px; padding:20px 0 20px 0; margin:0 0 60px 0;}
+.checkout .endereco-confirmacao table{ border:0px solid;}
+.checkout .endereco-confirmacao .header{font-size:14px; color:#333; font-weight:bold; border-bottom:1px solid #ccc; padding:0 0 25px 30px;}
+.checkout .endereco-confirmacao .dados{border-right:1px solid #ccc; vertical-align:middle; padding:15px 0 15px 30px;}
+.checkout .endereco-confirmacao .dados td{padding: 3px;}
+
+
+/*==============================================================================================================
+ COMPONENTE COLORBOX
+================================================================================================================*/
+
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+#cboxOverlay{background:#fff;}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:25px; height:25px; background:url(../../imagens/layout/border1.png) no-repeat 0 0;}
+    #cboxTopCenter{height:25px; background:url(../../imagens/layout/border1.png) repeat-x 0 -50px;}
+    #cboxTopRight{width:25px; height:25px; background:url(../../imagens/layout/border1.png) no-repeat -25px 0;}
+    #cboxBottomLeft{width:25px; height:25px; background:url(../../imagens/layout/border1.png) no-repeat 0 -25px;}
+    #cboxBottomCenter{height:25px; background:url(../../imagens/layout/border1.png) repeat-x 0 -75px;}
+    #cboxBottomRight{width:25px; height:25px; background:url(../../imagens/layout/border1.png) no-repeat -25px -25px;}
+    #cboxMiddleLeft{width:25px; background:url(../../imagens/layout/border2.png) repeat-y 0 0;}
+    #cboxMiddleRight{width:25px; background:url(../../imagens/layout/border2.png) repeat-y -25px 0;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:20px;}
+        #cboxTitle{position:absolute; bottom:0px; left:0; text-align:center; width:100%; color:#999;}
+        #cboxCurrent{position:absolute; bottom:0px; left:100px; color:#999;}
+        #cboxLoadingOverlay{background:#fff url(../../imagens/layout/loading.gif) no-repeat 5px 5px;}
+
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:0px; right:42px; color:#444;}
+        #cboxPrevious{position:absolute; bottom:0px; left:0; color:#444;}
+        #cboxNext{position:absolute; bottom:0px; left:63px; color:#444;}
+        #cboxClose{position:absolute; top:0; right:0; display:block; color:#fff; background:#999; padding:10px 15px 10px 15px; border-radius:5px; font-weight:bold;}
+
+
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+
+/*==============================================================================================================
+ RESPONSIVO
+================================================================================================================*/
+
+/* TABLET */
+
+@media screen and (min-width: 480px) and (max-width: 989px){
+
+img{ max-width:100%;}	
+.wrapper{ width:auto; height:auto; padding:30px;}	
+.checkout .checkout-logotipo{ width:100%; margin:0 auto 30px auto; text-align:center;}
+.checkout .navegador{ width:100%;}
+
+.checkout .navegador .info-inativo{left:120%;}
+.checkout .navegador .info-ativo{left:120%;}
+
+.checkout .meu-cadastro .seletor{ width:100%; height:36px; float:left; background:url(../../imagens/layout/checkout/seletor.png) no-repeat 0 0; margin:8px 0 20px 0; font-weight:bold; font-size:14px; padding:8px; text-align:left}
+
+.checkout .formulario{width:70%; margin: 0 auto 0 auto; float: none;}
+.checkout .formulario label{ width:100%; float:none; text-align:left; margin:10px 0 7px 0; display: block;}
+.checkout .formulario input.g{ width:90%;}
+.checkout .formulario input.m{ width:80%;}
+.checkout .formulario input.p{ width:60%;}
+.checkout .formulario input.pp{ width:40%;}
+.checkout .formulario input[type="submit"]{margin: 0 0 0 0;}
+.checkout .formulario textarea.g{width:100%;}
+
+.checkout .seu-pedido{ width:100%}
+.checkout .endereco-entrega { width:100%; margin:0px 0 10% 0;}
+
+.checkout .meus-enderecos{width:92%; margin:0 0 20px 0;}
+
+}
+
+/* SMARTPHONE */
+
+@media screen and (min-width: 0px) and (max-width: 479px){
+
+img{ max-width:100%;}	
+.wrapper{ width:auto; height:auto; padding:20px;}
+.checkout .checkout-logotipo{ width:100%; margin:0 auto 30px auto; text-align:center;}
+.checkout .navegador{ width:100%; height:auto; margin:0 0 40px 0;}
+
+.checkout .navegador .check-carrinho{float:none; line-height:0px;}
+.checkout .navegador .check-ativo{float:none; line-height:0px; }
+.checkout .navegador .check-inativo{float:none;  line-height:0px;}
+
+.checkout .navegador hr.linha-ativa{width:9%;}
+.checkout .navegador hr.linha-inativa{width:9%;}
+
+.checkout .navegador .info-inativo{top:50%; }
+.checkout .navegador .info-ativo{top:50%; }
+
+.checkout .bt-continuar-comprando a{ padding:6px 15px 6px 15px; float:right;}
+.checkout .bt-concluir-compra a{ padding:6px 25px 6px 25px;}
+.checkout .bt-selecionar a{ padding:6px 25px 6px 25px;}
+.checkout .bt-revisar a{padding:6px 15px 6px 15px;}
+.checkout .bt-confirmar a{ padding:6px 25px 6px 25px;}
+.checkout .bt-voltar a{padding:6px 15px 6px 15px;}
+
+.checkout .entrar{ float:none; width:100%; margin:0 0 0 0; border-right:0px; padding:0 0 0 0}
+.checkout .cadastrar{ float:none; width:100%; margin:0 0 0 0;}
+.checkout .cadastrar span{ width:100%; float:left; font-size:18px; font-weight:bold; color:#333; margin:20px 0 20px 0;}
+.checkout .entrar .alterar-pedido a{ display:none; }
+
+.checkout .meu-cadastro .seletor{ width:100%; height:36px; float:left; background:url(../../imagens/layout/checkout/seletor.png) no-repeat 0 0; margin:8px 0 0 0; font-weight:bold; font-size:14px; padding:8px; text-align:left}
+
+.checkout .formulario{width:80%; margin: 0 auto 0 auto; float: none;}
+.checkout .formulario label{ width:100%; float:none; text-align:left; margin:10px 0 7px 0; display: block;}
+.checkout .formulario input.g{ width:90%;}
+.checkout .formulario input.m{ width:80%;}
+.checkout .formulario input.p{ width:60%;}
+.checkout .formulario input.pp{ width:40%;}
+.checkout .formulario input[type="submit"]{margin: 0 0 0 0;}
+.checkout .formulario textarea.g{width:100%;}
+
+.checkout .meu-cadastro .selecao{ width:100%; margin:0 0 5% 5%;}
+
+.checkout .seu-pedido{ width:100%}
+.checkout .endereco-entrega { width:100%; margin:0px 0 10% 0;}
+
+.checkout .carrinho table{display:block; width:auto; overflow-x: auto; white-space: nowrap;}
+.checkout .carrinho .carrinho-descricao-produto{ white-space:normal; }
+.checkout .carrinho .quantidade{ white-space:normal;}
+.checkout .carrinho .quantidade{ white-space:normal;}
+.checkout .endereco-confirmacao table{ white-space:normal;}
+
+.checkout .meus-enderecos{width:92%; margin:0 0 20px 0;}
+
+
+}
